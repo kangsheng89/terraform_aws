@@ -15,18 +15,16 @@ module "private_sg" {
   computed_ingress_with_source_security_group_id = [
     {
       rule                     = "ssh-tcp"
-      source_security_group_id = module.loadbalancer_sg.security_group_id
+      source_security_group_id = module.public_bastion_sg.security_group_id
     },
     {
-      rule                     = "http-80-tcp"
-      source_security_group_id = module.loadbalancer_sg.security_group_id
-    },
-    {
-      rule                     = "http-8080-tcp"
+      from_port   = 80
+      to_port     = 80
+      protocol    = "tcp"
       source_security_group_id = module.loadbalancer_sg.security_group_id
     },
   ]
-  number_of_computed_ingress_with_source_security_group_id = 3
+  number_of_computed_ingress_with_source_security_group_id = 2
   
   # Egress Rule - all-all open
   egress_rules = ["all-all"]
