@@ -14,7 +14,7 @@ An architecture for web application with consideration of cloud security, high a
 ## Architecture
 
 
-![architecture](https://user-images.githubusercontent.com/12370490/129519534-4acb66a7-eea8-42a2-bc82-14701e1d5708.png)
+![Updated_diagram](https://user-images.githubusercontent.com/12370490/129582299-94e52ace-efa0-4fc4-bcf6-8b8cd9b5c302.png)
 
     
 Explanation:
