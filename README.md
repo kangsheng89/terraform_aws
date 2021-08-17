@@ -59,7 +59,7 @@ Jenkins deployment server is placed in the private subnet and expose port 8080 (
 
 setup port mapping of SSH on localhost port 1000 to port 8080 (jenkins default port)
  ```bash
- ssh -i my_key_pairs_ori.pem  ec2-user@ec2-54-158-127-234.compute-1.amazonaws.om -N -L 1000:10.0.2.65:8080
+ ssh -i my_key_pairs_ori.pem  ec2-user@ec2-xx-xxx-xxx-xx.compute-1.amazonaws.om -N -L 1000:10.0.xx.xx:8080
  ```
  
  after setup this, open chrome to http://localhost:1000 to access to the Jenkins server
