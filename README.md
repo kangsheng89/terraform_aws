@@ -53,9 +53,18 @@ Currently, the NodeJS - Express application only uses Layer 7, there is no need 
 In order to troubleshoot the servers, bastion server is playing the role of a bridge between work stations and servers. Security groups of bastion server should limit to the work stations' IPs only.
 
 **9. Deployment Server:**
+- note: need to add security group to allow port 8080 into the private subnet from bastion subnet
+
 Jenkins deployment server is placed in the private subnet and expose port 8080 (Jenkins Console) to Bastion server. Developer can access Jenkins using bastion server.
 
-
+setup port mapping of SSH on localhost port 1000 to port 8080 (jenkins default port)
+ ```bash
+ ssh -i my_key_pairs_ori.pem  ec2-user@ec2-54-158-127-234.compute-1.amazonaws.om -N -L 1000:10.0.2.65:8080
+ ```
+ 
+ after setup this, open chrome to http://localhost:1000 to access to the Jenkins server
+ 
+ 
 ## Instruction to launch this architecture:
    
 ### Launch the architecture:
