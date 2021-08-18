@@ -78,5 +78,9 @@ Terraform is used to provide and manage the resources.
 ```
 
 
+### Rooms for improvement
+1. using EKS/kubernetes for the app stack 
+2. building monitoring using ELK for web access logs
+3. using ALB to provide more flexible routing such as path based routing
 
 
